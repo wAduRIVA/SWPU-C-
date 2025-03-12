@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+#define pi 3.1415926
+int main()
+{
+	float a,b,v,s,f;
+	printf("请输入半径");
+	scanf("%f",&a);
+	printf("请输入高");
+	scanf("%f",&b);
+	v=pi*pow(a,2)*b/3;
+	f=sqrt(a*a+b*b);
+	s=pi*b*b+pi*b*f;
+	printf("体积为%f，表面积为%f",v,s);
+	getchar();
+	getchar();
+	return 0;
+}
