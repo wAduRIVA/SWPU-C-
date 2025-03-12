@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+ float m,n,p,q,a,b;
+ printf("请输入数字:");
+ scanf("%f%f",&a,&b);
+ m=a+b;
+n=a-b;
+p=a*b;
+q=a/b;
+printf("和%f,差%f,积%f,商%f",m,n,p,q);
+
+getchar();
+getchar();
+return 0;
+}
