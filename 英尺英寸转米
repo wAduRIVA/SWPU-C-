@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main()
+{
+	float a,b,m,n,f;
+	printf("请输入英寸英尺");
+	scanf("%f%f",&a,&b);
+	m=a*0.3048;
+	n=b*0.3048/12;
+	f=m+n;
+	printf("身高为%f",f);
+	getchar();
+	getchar();
+	return 0;
+}
