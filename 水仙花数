@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+        int num,s,bw,sw,gw;  //num-三位整数,s-立方和,bw-百位，sw-十位，gw-各位
+        printf("Please input a number:");
+        scanf("%d",&num);
+/**********Program**********/
+		bw=num/100%10;
+		sw=num/10%10;
+		gw=num%10;
+		s=gw*gw*gw+sw*sw*sw+bw*bw*bw;
+		if(s==num)
+/**********  End  **********/                                     
+           printf("%d\n",s);
+        return 0; 
+}
