@@ -8,8 +8,6 @@ int main( )
         flag=1;
         else 
         flag=0;
-
-
 /**********  End  **********/
         printf("%d\n",flag);
         return 0;
