@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+        int x,y,z;
+        char op;
+        scanf("%d%c%d",&x,&op,&y);
+/**********Program**********/
+        switch(op)
+        {
+        case 42:z=x*y;break;
+        case 43:z=x+y;break;
+        case 45:z=x-y;break;
+        case 47:z=x/y;break;
+        default:z=-99999;break;
+        }       
+/**********  End  **********/
+        printf("%d\n",z);
+        return 0;
+}
