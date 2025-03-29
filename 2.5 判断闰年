@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main( )
+{
+        int year,flag;
+        scanf("%d",&year);
+/**********Program**********/ 
+        if(year%4==0&year%100!=0&year%400!=0)
+        flag=1;
+        else 
+        flag=0;
+
+
+/**********  End  **********/
+        printf("%d\n",flag);
+        return 0;
+}
