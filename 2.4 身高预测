@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+        int sex,he,ph;/*sex-1为男性，0为女性；he-良好卫生习惯1-是，0-否；
+                       ph-参加体育锻炼，1-是，0-否*/
+        float fh,mh,h;
+        printf("你是男性还是女性\n");scanf("%d",&sex);
+        printf("请输入父母的身高\n");scanf("%f%f",&fh,&mh);
+        printf("是否参加体育锻炼\n");scanf("%d",&ph);
+        printf("是否有良好的卫生饮食习惯\n");scanf("%d",&he);
+/**********Program**********/
+        switch(sex)
+        {
+        case 1:if(ph==1&he==1){h=(fh+mh)*0.54*1.02*1.015;}
+               if(ph==1&he==0){h=(fh+mh)*0.54*1.02;}
+               if(ph==0&he==1){h=(fh+mh)*0.54*1.015;}
+               if(ph==0&he==1){h=(fh+mh)*0.54;}
+               break;
+        case 0:if(ph==1&he==1){h=(fh*0.923+mh)/2*1.02*1.015;}
+               if(ph==1&he==0){h=(fh*0.923+mh)/2*1.02;}
+               if(ph==0&he==1){h=(fh*0.923+mh)/2*1.05;}
+               if(ph==0&he==1){h=(fh*0.923+mh)/2;}
+
+               break;
+        }
+/**********  End  **********/
+        printf("%0.2f\n",h);
+        getchar();
+        getchar();
+        return 0;
+}
