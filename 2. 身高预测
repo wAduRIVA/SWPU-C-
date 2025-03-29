@@ -25,7 +25,5 @@ int main()
         }
 /**********  End  **********/
         printf("%0.2f\n",h);
-        getchar();
-        getchar();
         return 0;
 }
