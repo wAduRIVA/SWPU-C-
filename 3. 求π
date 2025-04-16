@@ -1,0 +1,23 @@
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main( )
+{ 
+        double  x,pi=0,t=1;
+        int n;
+        printf("Input eps:") ;
+        scanf("%lf",&amp;x);
+/**********Program**********/
+		n=1;
+		do
+		{
+		pi=pi+t;
+		t=t*((double)n/(2*(double)n+1));
+	    n++;
+		}
+		while(t&gt;x);
+		pi=pi*2;
+/**********  End  **********/
+        printf("\neps = %f, PI=%f\n", x, pi);
+        return 0;
+}
