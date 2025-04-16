@@ -1,5 +1,5 @@
-#include &lt;stdio.h&gt;
-#include &lt;math.h&gt;
+#include <stdio.h>
+#include <math.h>
 
 int main( )
 { 
