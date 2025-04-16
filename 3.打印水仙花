@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+        int i,bw,sw,gw;  //bw-百位，sw-十位，gw-各位
+     
+/**********Program**********/
+		for(i=100;i<1000;i++)
+		{
+		gw=i%10;
+		sw=i/10%10;
+		bw=i/100;
+		if(pow(gw,3)+pow(sw,3)+pow(bw,3)==i)
+/**********  End  **********/                                     
+        printf("%d\n",i);
+        }
+        return 0; 
+}
