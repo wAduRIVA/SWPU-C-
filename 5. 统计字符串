@@ -1,42 +1,62 @@
 #include &lt;stdio.h&gt;
 void  wwjt(); 
-    
-int fun(int a[],int n)
+
+/*-全局变量，a用于保存字母个数、num用于保存数字个数
+b用于保存空格个数、other用于保存其他字符字数*/
+int a=0,num=0,b=0,other=0;
+
+void count(char c[])
 {
-  
-  /**********Program**********/
-  int i,j,t,k;
-  for(i=0,j=i+1;i&lt;6;i++)
-  {
-		  if(a[i]&gt;a[j]&amp;&amp;a[i]%2==0)
-		  {
-			  t=a[i];
-			  a[i]=a[j];
-			  a[j]=t;
-		  }
-  }
-         k=a[j];
-	     return k;
-  
-  
-  
-  
+   /**********Program**********/
+	int i;
+	for(i=0;c[i]!='\0';i++)
+	{
+		if(c[i]&gt;=48&amp;&amp;c[i]&lt;=57)
+		{
+			num++;
+		}
+		else if((c[i]&gt;=65&amp;&amp;c[i]&lt;=90)||(c[i]&gt;=97&amp;&amp;c[i]&lt;=122))
+		{
+		a++;
+		}
+		else if(c[i]==32)
+			{
+				b++;
+		     }
+		else
+		{
+			other++;
+		}
+	}
+
   /**********  End  **********/
-  
+
 }
 
 void main()
 {
-  int a[]={1,2,9,24,35,18},k;
-  k=fun(a,6);
-  printf("max=%d\n",k);
-  wwjt();
+                                
+ char ch[80];  
+ 
+ printf ("input string:"); 
+ gets(ch);                                             
+
+ count(ch); 
+
+ printf ("a=%d num=%d b=%d other=%d\n",a,num,b,other);  
+ getchar();
+ wwjt();
 }
+
+
+
+
 
 void wwjt()
 {
   FILE *IN,*OUT;
-  int iIN[10],iOUT,i,j;
+  int i;
+  char sin[80];
   IN=fopen("in.dat","r");
   if(IN==NULL)
   {
@@ -47,13 +67,19 @@ void wwjt()
   {
     printf("Please Verify The Current Dir.. it May Be Changed");
   }
-  for(j=0;j&lt;10;j++)
-  {     
-    for(i=0;i&lt;10;i++)
-      fscanf(IN,"%d",&amp;iIN[i]);
-    iOUT=fun(iIN,10); 
+  for(i=0;i&lt;5;i++)
+  { 
+    a=0;
+    num=0;
+    b=0;
+    other=0;       
+    fscanf(IN,"%s",&amp;sin);
+    count(sin);
+    fprintf(OUT,"%d\n",a);
+    fprintf(OUT,"%d\n",num);
+    fprintf(OUT,"%d\n",b);
+    fprintf(OUT,"%d\n",other);  
   }
-  fprintf(OUT,"%d\n",iOUT);
   
   fclose(IN);
   fclose(OUT);
