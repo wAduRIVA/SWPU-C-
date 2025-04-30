@@ -1,0 +1,60 @@
+#include &lt;stdio.h&gt;
+void  wwjt(); 
+    
+int fun(int a[],int n)
+{
+  
+  /**********Program**********/
+  int i,j,t,k;
+  for(i=0,j=i+1;i&lt;6;i++)
+  {
+		  if(a[i]&gt;a[j]&amp;&amp;a[i]%2==0)
+		  {
+			  t=a[i];
+			  a[i]=a[j];
+			  a[j]=t;
+		  }
+  }
+         k=a[j];
+	     return k;
+  
+  
+  
+  
+  /**********  End  **********/
+  
+}
+
+void main()
+{
+  int a[]={1,2,9,24,35,18},k;
+  k=fun(a,6);
+  printf("max=%d\n",k);
+  wwjt();
+}
+
+void wwjt()
+{
+  FILE *IN,*OUT;
+  int iIN[10],iOUT,i,j;
+  IN=fopen("in.dat","r");
+  if(IN==NULL)
+  {
+    printf("Please Verify The Currernt Dir..it May Be Changed");
+  }
+  OUT=fopen("out.dat","w");
+  if(OUT==NULL)
+  {
+    printf("Please Verify The Current Dir.. it May Be Changed");
+  }
+  for(j=0;j&lt;10;j++)
+  {     
+    for(i=0;i&lt;10;i++)
+      fscanf(IN,"%d",&amp;iIN[i]);
+    iOUT=fun(iIN,10); 
+  }
+  fprintf(OUT,"%d\n",iOUT);
+  
+  fclose(IN);
+  fclose(OUT);
+}
