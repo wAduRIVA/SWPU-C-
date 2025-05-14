@@ -1,0 +1,38 @@
+/*-------------------------------------------------------
+【程序设计】
+---------------------------------------------------------
+题目： 请编一个函数fun(char s[])，函数的功能是把s所指字符串
+中的内容逆置。例如：字符串中原有的字符串为：abcdefg，则调
+用该函数后, 串中的内容为：gfedcba。
+
+-------------------------------------------------------*/
+#include <string.h>
+#include <stdio.h>
+#define   N   81
+void fun ( char  s[ ] )
+{
+/**********Program**********/
+	char *start=s;
+	char *end=s+strlen(s)-1;
+	while(start<end)
+	{
+	char temp=*start;
+	*start=*end;
+	*end=temp;
+	start++;
+	end--;
+	}
+
+
+/**********  End  **********/
+}
+main( )
+{
+   char   a[N];
+   printf ( "Enter  a  string :  " ); gets ( a );
+   printf ( "The original string is :  " ); puts( a );
+   fun ( a );
+   printf("\n");
+   printf ( "The string after modified :  ");
+   puts ( a );
+}
