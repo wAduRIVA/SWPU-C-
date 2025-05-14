@@ -5,9 +5,9 @@ int main()
         int i,j;
         double sum=0.0;
 /**********Program**********/
-        for(i=3;i&lt;101;i++)
+        for(i=3;i<101;i++)
 		{
-			for(j=2;j&lt;=i;j++)
+			for(j=2;j<=i;j++)
 				if(i%j==0)
 				  break;
 			    if(j==i)
