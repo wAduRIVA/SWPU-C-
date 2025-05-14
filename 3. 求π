@@ -15,7 +15,7 @@ int main( )
 		t=t*((double)n/(2*(double)n+1));
 	    n++;
 		}
-		while(t&gt;x);
+		while(t>=x);
 		pi=pi*2;
 /**********  End  **********/
         printf("\neps = %f, PI=%f\n", x, pi);
