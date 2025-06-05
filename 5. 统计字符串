@@ -8,27 +8,27 @@ int a=0,num=0,b=0,other=0;
 void count(char c[])
 {
    /**********Program**********/
-	int i;
-	for(i=0;c[i]!='\0';i++)
-	{
-		if(c[i]&gt;=48&amp;&amp;c[i]&lt;=57)
-		{
-			num++;
-		}
-		else if((c[i]&gt;=65&amp;&amp;c[i]&lt;=90)||(c[i]&gt;=97&amp;&amp;c[i]&lt;=122))
-		{
-		a++;
-		}
-		else if(c[i]==32)
-			{
-				b++;
-		     }
-		else
-		{
-			other++;
-		}
-	}
-
+	
+            int i;
+        for(i=0;c[i]!='\0';i++)
+        {
+                if(c[i]>=48&&c[i]<=57)
+                {
+                        num++;
+                }
+                else if((c[i]>=65&&c[i]<=90)||(c[i]>=97&&c[i]<=122))
+                {
+                a++;
+                }
+                else if(c[i]==32)
+                        {
+                                b++;
+                     }
+                else
+                {
+                        other++;
+                }
+        }
   /**********  End  **********/
 
 }
