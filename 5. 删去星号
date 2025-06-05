@@ -1,0 +1,28 @@
+#include <stdio.h>
+void  fun( char a[])
+{
+  /**********Program**********/
+int pre=0,later=0;
+for(pre=0;a[pre]!='\0';pre++)
+{
+    if(a[pre]!='*')
+    {
+    a[later]=a[pre];
+     later++;
+    }
+
+}
+a[later]='\0';
+
+
+  /**********  End  **********/
+
+}
+
+void main()
+{
+   char  s[81];
+   printf("Enter a string:\n");gets(s);
+   fun( s );
+   printf("The string after deleted:\n");puts(s);
+}
