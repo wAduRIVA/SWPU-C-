@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include<stdio.h>
+
+void sort(int a[],int n)
+{
+  /**********Program**********/
+     int i,j,k,temp;
+    for(i=0;i<n-1;i++)
+    {
+        k=i;
+        for(j=i+1;j<n;j++)
+          if(*(a+j)<*(a+k))
+            k=j;
+       if(k!=i)
+       {
+           temp=*(a+k);
+           *(a+k)=*(a+i);
+          *(a+i)=temp;
+       }
+    }
+  
+  
+  
+  
+  
+  /**********  End  **********/
+}
+
+main()
+{
+  int a[16],i;
+  for(i=0;i<16;i++)
+    a[i]=rand()%100;
+  for(i=0;i<16;i++)
+    printf("%4d",a[i]);
+  printf("\n-------------------\n");
+  sort(a,16);
+  for(i=0;i<16;i++)
+    printf("%4d",a[i]);
+}
