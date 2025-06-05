@@ -1,0 +1,51 @@
+#include <stdio.h>
+void  wwjt(); 
+
+void copy(char str1[],char str2[])
+{
+  /**********Program**********/
+  
+  int i=0;
+  while(str1[i]!='\0')
+  {
+  str2[i]=str1[i];
+  i++;
+  }
+  str2[i]='\0';
+  
+  
+  
+  /**********  End  **********/
+}
+
+void main()
+{
+  char c1[40],c2[40];
+  gets(c1);
+  copy(c1,c2);
+  puts(c2);
+  wwjt();
+}
+
+
+void wwjt()
+{
+  FILE *IN,*OUT;
+  char i[100];
+  char o[100];
+  IN=fopen("in.dat","r");
+  if(IN==NULL)
+  {
+    printf("Read FILE Error");
+  }
+  OUT=fopen("out.dat","w");
+  if(OUT==NULL)
+  {
+    printf("Write FILE Error");
+  }
+  fscanf(IN,"%s",i);
+  copy(i,o);
+  fprintf(OUT,"%s\n",o);
+  fclose(IN);
+  fclose(OUT);
+}
