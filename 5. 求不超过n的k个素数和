@@ -1,0 +1,38 @@
+#include <stdio.h>
+int a[11];
+int count=0,sum=0;/*count数组中存放素数的个数，sum数组中素数求和*/
+void fun(int n,int k)
+{   
+    int i,j;
+/**********Program**********/  
+    int count=0;
+    int b,c;
+for(i=n+1;count<k;i++)
+{
+for(j=2;j<i;j++)
+if(i%j==0 && i!=j)   //判断i是否是素数
+break;
+if(i==j)  // 如果i==j则表示i是素数
+{a[count++]=i;
+sum+=a[count++];}
+ for(b = 0; b < count; b++) 
+ {
+        printf("%d ", a[i]);
+   }
+     printf("\n");
+    
+    printf("%d\n", sum);
+}
+/**********  End  **********/
+}
+
+int main()
+{
+    int n,k;
+    printf("\nInput n and k:  ");
+    scanf("%d %d",&n,&k);
+    fun(n,k);
+    getchar();
+    getchar();
+    return 0;
+}
